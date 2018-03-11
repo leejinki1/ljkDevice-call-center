@@ -7,11 +7,7 @@
 
 **项目地址** 
 **ljkFrame-base-boot地址**
-- oschina仓库：https://git.oschina.net/leejinki/ljkFrame.git
-- github仓库：https://github.com/leejinki/ljkFrame-base-boot.git
-
-- 提供了SpringMVC版ljkFrame，获取【[SpringMVC](https://gitee.com/soEasyCode/ljkFrame)】
-- 提供了SpringBoot工作流程版本ljkFrame-activiti-boot，获取【[ljkFrame-activiti-boot工作流版](https://gitee.com/leejinki/ljkFrame-activiti-boot)】
+-  码云仓库：https://gitee.com/leejinki/ljkFrame-base-boot.git
 
  **演示环境** 
 
