@@ -1,6 +1,6 @@
 package com.ljk.modules.gen.utils;
 
-import com.ljk.LjkFrameBootApplication;
+import com.ljk.LjkDeviceCallCenterApplication;
 import com.ljk.modules.common.common.Constant;
 import com.ljk.modules.gen.service.SysGeneratorService;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
  * @Date 2017/11/15
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = LjkFrameBootApplication.class)
+@SpringBootTest(classes = LjkDeviceCallCenterApplication.class)
 public class GenLocalUtils {
     @Resource
     private SysGeneratorService generatorService;

@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ljk.ljkFrame</groupId>
-	<artifactId>ljkFrame-base-boot</artifactId>
-	<version>${ljkFrame.version}</version>
+	<groupId>ljk.ljkDevice</groupId>
+	<artifactId>ljkDevice-call-center</artifactId>
+	<version>${ljkDevice.version}</version>
 	<packaging>jar</packaging>
 
-	<name>ljkFrame-base-boot</name>
-	<description>ljkFrame-base-boot for Spring Boot</description>
+	<name>ljkDevice-call-center</name>
+	<description>ljkDevice-call-center for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

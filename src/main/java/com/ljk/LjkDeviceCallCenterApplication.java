@@ -6,14 +6,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class LjkFrameBootApplication extends SpringBootServletInitializer{
+public class LjkDeviceCallCenterApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
-		SpringApplication.run(LjkFrameBootApplication.class, args);
+		SpringApplication.run(LjkDeviceCallCenterApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder){
-		return builder.sources(LjkFrameBootApplication.class);
+		return builder.sources(LjkDeviceCallCenterApplication.class);
 	}
 }

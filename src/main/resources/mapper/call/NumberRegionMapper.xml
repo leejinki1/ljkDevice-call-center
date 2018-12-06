@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ljk.modules.call.dao.NumberRegionDao">
+
+    <resultMap type="com.ljk.modules.call.entity.NumberRegionEntity" id="numberRegionMap">
+		<result property="id" column="id"/>
+		<result property="phoneNumberId" column="phone_number_id"/>
+        <result property="number" column="number"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+		id,
+		phone_number_id,
+		number,
+		province,
+		city
+    </sql>
+
+	<select id="queryObject" resultType="com.ljk.modules.call.entity.NumberRegionEntity">
+		select * from call_center_number_region where id = #{id}
+	</select>
+
+	<select id="queryList" parameterType="map" resultType="com.ljk.modules.call.entity.NumberRegionEntity">
+		select * from call_center_number_region
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="queryTotal" parameterType="map" resultType="int">
+		select count(*) from call_center_number_region
+	</select>
+	 
+	<insert id="save" parameterType="com.ljk.modules.call.entity.NumberRegionEntity">
+		insert into call_center_number_region
+		(
+			`phone_number_id`,
+			`number`,
+			`province`,
+			`city`
+		)
+		values
+		(
+			#{phone_number_id},
+			#{number},
+			#{province},
+			#{city}
+		)
+	</insert>
+
+	<update id="update" parameterType="com.ljk.modules.call.entity.NumberRegionEntity">
+		update call_center_number_region
+		<set>
+			<if test="phone_number_id != null">`phone_number_id` = #{phone_number_id}, </if>
+			<if test="number != null">`number` = #{number}, </if>
+			<if test="province != null">`province` = #{province}, </if>
+			<if test="city != null">`city` = #{city}, </if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<!-- 根据number，查询记录-->
+	<select id="queryByNumber" resultType="com.ljk.modules.call.entity.NumberRegionEntity">
+		select * from call_center_number_region where `number` = #{number}
+	</select>
+
+	<delete id="deleteBatch" parameterType="int">
+		delete from call_center_number_region where id in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+
+</mapper>
